@@ -8,7 +8,7 @@ const newProduct = (name, price, imageUrl, id) => {
             <img src="${imageUrl}" alt="img">
             <h1 class="product-name"> ${name} </h1>
             <p class="price">${formatPrice(price)}</p>
-            <a class="see-product" href="../product.html?id=${id}">Ver Producto</a>
+            <a class="see-product" href="../../screens/product.html?id=${id}">Ver Producto</a>
         </div>   
     `;
   card.innerHTML = content;

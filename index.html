@@ -1,99 +1,90 @@
 <!DOCTYPE html>
 <html lang="ES">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet"/>
-    <link rel="shortcut icon" href="assets/logo.ico" mce_href="assets/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/show-products.css">
-    
-    <title>Alura Geek</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo-search">
-          <div class="logo">
-            <img src="../assets/logo.png" alt="logo" />
-            <p class="logo-blue">Alura</p>
-            <p>Geek</p>
-          </div>
-          <input i type="text" placeholder="Qué deseas buscar?" />
-        </div>
-        <div class="login">
-          <a href="login.html"><button type="submit">Login</button></a>
-        </div>
-      </nav>
-    </header>
 
-    <section class="emphasis">
-      <div class="banner">
-        <h1>Noviembre Promocional</h1>
-        <h4>Productos seleccionados con 33% de descuento</h4>
-        <button>Ver Consolas</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="assets/logo.ico" mce_href="assets/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/show-products.css">
+
+  <title>Alura Geek</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo-search">
+        <a href="#" class="logo">
+          <img src="../assets/logo.png" alt="logo" />
+          <p class="logo-blue">Alura</p>
+          <p>Geek</p>
+        </a>
+        <input i type="text" placeholder="Qué deseas buscar?" />
       </div>
+      <div class="login">
+        <a href="/screens/login.html"><button type="submit">Login</button></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="emphasis">
+    <div class="banner">
+      <h1>Noviembre Promocional</h1>
+      <h4>Productos seleccionados con 33% de descuento</h4>
+      <button>Ver Consolas</button>
+    </div>
+  </section>
+
+  <section class="gral-prods">
+    <div class="prod-title">
+      <div class="title">
+        <p>Productos</p>
+      </div>
+      <div class="show-more">
+        <div class="div-seeAll">
+          Ver Todo <img class="seeAll" src="../assets/Vector.png" alt="arrow" />
+        </div>
+      </div>
+    </div>
+    <section class="product-section" data-product>
+
     </section>
+  </section>
 
-    <section class="gral-prods">
-      <div class="prod-title">
-        <div class="title">
-          <p>Productos</p>
-        </div>
-        <div class="show-more">
-          <div class="div-seeAll">
-            Ver Todo <img class="seeAll" src="../assets/Vector.png" alt="arrow" />
-          </div>
-        </div>
-      </div>
-      <section class="product-section" data-product>
+  <section class="contact">
+    <a href="#" class="reference">
+      <img src="../assets/logo.png" alt="logo" />
+      <p class="logo-blue">Alura</p>
+      <p>Geek</p>
+    </a>
+    <div class="links-useful">
+      <a href="">Quienes somos</a>
+      <a href="">Política de Privacidad</a>
+      <a href="">Programa de fidelidad</a>
+      <a href="">Nuestras Tiendas</a>
+      <a href="">Quiero ser franquiciado</a>
+      <a href="">Anuncie aquí</a>
+    </div>
 
-      </section>
-    </section>
+    <div class="form">
+      <p>Hable con nosotros</p>
+      <div class="label-float">
+        <label for="Name" class="label-name">Nombre</label>
+        <input type="text" name="Name" id="Name" class="input-name" placeholder="Ingrese su nombre" />
+      </div>
+      <label for="message" class="label-message">Mensaje</label>
+      <textarea name="message" id="msg" cols="5" rows="5" placeholder="Escriba su Mensaje"></textarea>
+      <button>Enviar Mensaje</button>
+    </div>
+  </section>
+  <script type="module" src="/scripts/controllers/product-controller.js"></script>
+</body>
 
-    <section class="contact">
-      <div class="reference">
-        <img src="../assets/logo.png" alt="logo" />
-        <p>Alura</p>
-        <p>Geek</p>
-      </div>
-      <div class="links-useful">
-        <a href="">Quienes somos</a>
-        <a href="">Política de Privacidad</a>
-        <a href="">Programa de fidelidad</a>
-        <a href="">Nuestras Tiendas</a>
-        <a href="">Quiero ser franquiciado</a>
-        <a href="">Anuncie aquí</a>
-      </div>
-
-      <div class="form">
-        <p>Hable con nosotros</p>
-        <div class="label-float">
-          <label for="Name" class="label-name">Nombre</label>
-          <input
-            type="text"
-            name="Name"
-            id="Name"
-            class="input-name"
-            placeholder="Ingrese su nombre"
-          />
-        </div>
-        <label for="message" class="label-message">Mensaje</label>
-        <textarea
-          name="message"
-          id="msg"
-          cols="5"
-          rows="5"
-          placeholder="Escriba su Mensaje"
-        ></textarea>
-        <button>Enviar Mensaje</button>
-      </div>
-    </section>
-    <script type="module" src="/scripts/controllers/product-controller.js"></script>
-  </body>
 </html>
 
 <!-- 

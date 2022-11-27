@@ -71,6 +71,7 @@ nav {
 .logo {
   display: flex;
   align-items: center;
+  color: black;
 }
 
 .logo img {
@@ -83,7 +84,7 @@ nav {
   font-weight: bolder;
 }
 
-.logo .logo-blue {
+.logo-blue {
   margin-left: 10px;
   color: var(--blue-emphasis);
 }
@@ -133,6 +134,7 @@ nav {
 }
 
 .reference {
+  color: black;
   display: flex;
   width: 350px;
   margin: 20px 0 0 0;
@@ -151,7 +153,6 @@ nav {
 .reference p {
   font-size: 26px;
   font-weight: bolder;
-  color: var(--azul-destaque);
   margin-top: 5px;
   margin-left: 6px;
 }
