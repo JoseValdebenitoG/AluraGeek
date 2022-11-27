@@ -1,14 +1,14 @@
-import { productoServices } from "../servicios/producto-servicios.js";
+import { productServices } from "../services/product-services.js";
 import { formatPrice } from "../formatterPrices.js";
 
 const getProducts = (name, price, imageUrl, id) => {
   const card = document.createElement("div");
 
-  const contenido = `
-    <div class="produto">
+  const content = `
+    <div class="product">
         <div class="container">
             <button class="buttonDelete" type="button">
-              <img class="deleteImage" src="../assets/delete.png" alt="Deletar" />
+              <img class="deleteImage" src="../assets/delete.png" alt="Delete" />
             </button>
             
             <a href="../screens/edit-product.html?id=${id}">
@@ -22,25 +22,25 @@ const getProducts = (name, price, imageUrl, id) => {
         
         <img src="${imageUrl}" alt="img">
         <h1 class="product-name"> ${name} </h1>
-        <p class="preco">${formatPrice(price)}</p>
+        <p class="price">${formatPrice(price)}</p>
     </div>
     `;
-  card.innerHTML = contenido;
+  card.innerHTML = content;
   card.dataset.id = id;
   return card;
 };
 
-const productos = document.querySelector("[data-allProducts]");
+const products = document.querySelector("[data-allProducts]");
 
-productos.addEventListener("click", async (evento) => {
-  let deleteButton = evento.target.className === "deleteImage";
+products.addEventListener("click", async (event) => {
+  let deleteButton = event.target.className === "deleteImage";
   if (deleteButton) {
-    const producto = evento.target.closest("[data-id]");
-    let id = producto.dataset.id;
-    productoServices
-      .deleteProducto(id)
+    const product = event.target.closest("[data-id]");
+    let id = product.dataset.id;
+    productServices
+      .deleteProduct(id)
       .then((res) => {
-        producto.remove();
+        product.remove();
         console.log(res);
       })
       .catch((err) => console.log(err));
@@ -49,15 +49,15 @@ productos.addEventListener("click", async (evento) => {
 
 const render = async () => {
   try {
-    const listaProductos = await productoServices.listaProductos();
+    const showProducts = await productServices.showProducts();
 
-    listaProductos.forEach((producto) => {
-      productos.appendChild(
+    showProducts.forEach((product) => {
+      products.appendChild(
         getProducts(
-          producto.name,
-          producto.price,
-          producto.imageUrl,
-          producto.id
+          product.name,
+          product.price,
+          product.imageUrl,
+          product.id
         )
       );
     });
