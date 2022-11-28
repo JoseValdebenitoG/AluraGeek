@@ -17,9 +17,9 @@
 } 
 
 .product-button {
-  background-color: var(--azul-destaque);
+  background-color: var(--blue-emphasis);
   border: none;
-  color: var(--texto-destaque);
+  color: var(--text-emphasis);
   height: 51px;
   width: 180px;
 } 
@@ -33,13 +33,13 @@
 	gap: 10px;
 }
 
-.produto {
+.product {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
 } 
 
-.preco {
+.price {
   color: #464646;
   font-weight: bold;
   font-size: 16px;
