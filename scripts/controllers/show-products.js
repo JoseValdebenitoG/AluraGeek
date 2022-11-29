@@ -1,7 +1,7 @@
 import { productServices } from "../services/product-services.js";
 import { formatPrice } from "../formatterPrices.js";
 
-const getProducts = (name, price, imageUrl, id) => {
+export const getProducts = (name, price, imageUrl, id) => {
   const card = document.createElement("div");
 
   const content = `

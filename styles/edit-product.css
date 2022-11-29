@@ -4,55 +4,54 @@ main {
 }
 
 .top_menu {
+  align-items: center;
+  border: 1px solid var(--blue-emphasis);
+  background-color: var(--text-emphasis);
+  color: var(--text-emphasis);  
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 16px;
-  border: 1px solid var(--cor-primaria);
-
   font-weight: 600;
   font-size: 14px;
+  justify-content: center;
   line-height: 16px;
-
-  color: var(--cor-primaria);
-  background-color: var(--cor-branco);
+  padding: 12px 16px;
 }
 
-.geral-products {
-  height: 100%;
+.gral-prods {
   display: flex;
   flex-direction: column;
+  height: 100%;
   margin: 0 auto;
 }
 
 .products_title {
-  background-color: blue;
   display: flex;
   font-weight: 700;
   font-size: 22px;
+  justify-content: center;
   line-height: 26px;
+  margin: 0 auto;
   padding: 30px;
 }
 
 .products-section {
-  height: 100%;
-  margin: 15px;
-  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-around;
+  margin: 15px;
 }
 
 img {
-  width: 176px;
   height: 174px;
+  width: 176px;
 }
 
 .form-control {
-  width: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
 .product-add_input__url,
@@ -65,19 +64,25 @@ img {
   justify-content: center;
   margin: 0 auto;
   padding: 8px 12px 13px 12px;
-  border-bottom: 1px solid var(--cor-secundaria);
   border-radius: 4px;
   height: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   margin-top: 16px;
-  border: solid black 1px;
+  border: transparent;
+}
+
+.product-add_input__url:focus,
+.product-add_input__name:focus,
+.product-add_input__price:focus {
+  border-bottom: 1px solid var(--blue-emphasis);
+  transition: linear .3s;
 }
 
 .product-add_textarea__description {
   height: 81px;
-  font-family: "Releway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .product-submit_btn {
@@ -92,10 +97,11 @@ img {
   margin: 0 auto;
   width: 15%;
   height: 51px;
-  background: #2a7ae4;
+  background: var(--blue-emphasis);
   margin-top: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #ffffff;
+  color: var(--text-emphasis);
+  border: transparent;
 }

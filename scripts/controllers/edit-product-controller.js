@@ -1,34 +1,33 @@
-import { productoServices } from "../servicios/producto-servicios.js";
+import { productServices } from "../services/product-services.js";
 
 const getURL = new URL(window.location);
 
 const id = getURL.searchParams.get("id");
 
 const inputImageUrl = document.querySelector("[data-url]");
-const inputNombre = document.querySelector("[data-nombre]");
-const inputPrecio = document.querySelector("[data-precio]");
-const inputDescripcion = document.querySelector("[data-descripcion]");
+const inputName = document.querySelector("[data-nombre]");
+const inputPrice = document.querySelector("[data-precio]");
+const inputDescription = document.querySelector("[data-descripcion]");
 
-productoServices.listarUnProduto(id).then((datos) => {
-  inputImageUrl.setAttribute("src", datos.imageUrl);
-  inputNombre.value = datos.name;
-  inputPrecio.value = datos.price;
-  inputDescripcion.value = datos.description;
+productServices.showOneProduct(id).then((data) => {
+  inputImageUrl.setAttribute("src", data.imageUrl);
+  inputName.value = data.name;
+  inputPrice.value = data.price;
+  inputDescription.value = data.description;
 });
 
-const formulario = document.querySelector("[data-form]");
+const form = document.querySelector("[data-form]");
 
-formulario.addEventListener("submit", (evento) => {
-  evento.preventDefault();
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  productoServices
-    .alteraProduto(
+  productServices.editProduct(
       id,
-      inputNombre.value,
-      inputPrecio.value,
-      inputDescripcion.value
+      inputName.value,
+      inputPrice.value,
+      inputDescription.value
     )
     .then(() => {
-      window.location.href = "../screens/produto.html";
+      window.location.href = "../../screens/product.html";
     });
 });

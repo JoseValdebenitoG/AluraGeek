@@ -10,6 +10,7 @@ main {
     line-height: 26px;
     margin: 0 auto;
     justify-content: center;
+    padding: 30px;
 }
 
 .product-add_mobile {
